@@ -52,7 +52,7 @@ module.exports = appInfo => {
   };
 
   const security = {
-    domainWhiteList: [ 'http://localhost:8081' ],
+    domainWhiteList: [ '*' ],
     csrf: {
       enable: false,
     },
