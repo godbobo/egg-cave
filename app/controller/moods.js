@@ -17,9 +17,6 @@ class MoodController extends Controller {
     const { ctx } = this;
     ctx.validate(createRule, ctx.request.body);
     await ctx.service.moods.create(ctx.request.body);
-    ctx.body = {
-      message: '操作成功',
-    };
   }
 
 }

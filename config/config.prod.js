@@ -20,11 +20,13 @@ module.exports = appInfo => {
 
   // add your user config here
   const userConfig = {
-    aliyun: {
-      accessKeyId: 'LTAI4FikXtX6ynNYgDdkvZZ4',
-      accessKeySecret: 'TCYLCRyvq5voXALPCSQ9MIt6QzUzAz',
-    },
-
+    // 管理员账号密码
+    admin: [
+      {
+        username: 'bobo',
+        password: '123',
+      },
+    ],
   };
 
   const mysql = {

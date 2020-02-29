@@ -6,6 +6,6 @@
 module.exports = app => {
   const { router, controller } = app;
   router.get('/', controller.home.index);
-  router.get('/aliyun', controller.home.aliyunTest);
+  router.post('/api/user/login', controller.user.login);
   router.resources('/api/moods', controller.moods);
 };

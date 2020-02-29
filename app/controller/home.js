@@ -8,12 +8,6 @@ class HomeController extends Controller {
     ctx.body = 'hi, egg';
   }
 
-  async aliyunTest() {
-    const { ctx, config } = this;
-
-    ctx.body = JSON.stringify(config);
-
-  }
 }
 
 module.exports = HomeController;

@@ -20,11 +20,27 @@ module.exports = appInfo => {
 
   // add your user config here
   const userConfig = {
-    aliyun: {
-      accessKeyId: 'LTAI4FikXtX6ynNYgDdkvZZ4',
-      accessKeySecret: 'TCYLCRyvq5voXALPCSQ9MIt6QzUzAz',
+    // 管理员账号密码
+    admin: [
+      {
+        username: 'bobo',
+        password: '1',
+      },
+    ],
+
+    // 应用token签名密钥
+    token: {
+      secret: 'ctaovken',
+      options: {
+        expiresIn: '7d',
+      },
     },
 
+    // 无授权可通行路由列表
+    authWhiteList: {
+      post: [ '/api/user/login' ],
+      get: [ '/api/moods' ],
+    },
   };
 
   const mysql = {
@@ -43,7 +59,7 @@ module.exports = appInfo => {
       // 编码
       charset: 'utf8mb4',
       // 打印日志
-      debug: true,
+      debug: false,
     },
     // 是否加载到 app 上，默认开启
     app: true,
@@ -58,11 +74,20 @@ module.exports = appInfo => {
     },
   };
 
+  // 统一一场处理机制
+  const onerror = {
+    all(err, ctx) {
+      ctx.body = JSON.stringify(ctx.helper.returnError(err.message));
+      // ctx.status = 500;
+    },
+  };
+
   return {
     ...config,
     ...userConfig,
     mysql,
     security,
-    middleware: [ 'log' ],
+    middleware: [ 'auth', 'log', 'result' ],
+    onerror,
   };
 };

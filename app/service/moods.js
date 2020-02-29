@@ -2,7 +2,7 @@
 
 const Service = require('egg').Service;
 
-class UserService extends Service {
+class MoodsService extends Service {
 
   async index() {
     const { ctx } = this;
@@ -31,4 +31,4 @@ class UserService extends Service {
   }
 }
 
-module.exports = UserService;
+module.exports = MoodsService;
