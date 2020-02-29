@@ -77,6 +77,6 @@ module.exports = appInfo => {
     security,
     cluster,
     cors,
-    middleware: [ 'log' ],
+    middleware: [ 'auth', 'log', 'result' ],
   };
 };
