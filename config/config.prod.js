@@ -25,6 +25,8 @@ module.exports = appInfo => {
       {
         username: 'bobo',
         password: '123',
+        nickname: '博博',
+        email: '980742324@qq.com',
       },
     ],
   };

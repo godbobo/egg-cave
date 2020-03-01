@@ -1,6 +1,6 @@
 {
   "name": "cave",
-  "version": "1.2.1.20200301",
+  "version": "1.2.2",
   "description": "write life.",
   "private": true,
   "egg": {
