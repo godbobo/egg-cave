@@ -25,6 +25,8 @@ module.exports = appInfo => {
       {
         username: 'bobo',
         password: '1',
+        nickname: '博博',
+        email: '980742324@qq.com',
       },
     ],
 
@@ -38,7 +40,7 @@ module.exports = appInfo => {
 
     // 无授权可通行路由列表
     authWhiteList: {
-      post: [ '/api/user/login' ],
+      post: [ '/api/user/login', '/api/visitor/login' ],
       get: [ '/api/moods' ],
     },
   };
