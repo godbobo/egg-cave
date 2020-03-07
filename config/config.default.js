@@ -23,10 +23,10 @@ module.exports = appInfo => {
     // 管理员账号密码
     admin: [
       {
-        username: 'bobo',
+        username: 'admin',
         password: '1',
         nickname: '博博',
-        email: '980742324@qq.com',
+        email: 'admin@qq.com',
       },
     ],
 
