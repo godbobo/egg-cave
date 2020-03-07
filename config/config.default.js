@@ -41,7 +41,7 @@ module.exports = appInfo => {
     // 无授权可通行路由列表
     authWhiteList: {
       post: [ '/api/user/login', '/api/visitor/login' ],
-      get: [ '/api/moods' ],
+      get: [ '/api/moods', '/api/message-boards' ],
     },
   };
 
@@ -61,7 +61,7 @@ module.exports = appInfo => {
       // 编码
       charset: 'utf8mb4',
       // 打印日志
-      debug: false,
+      debug: true,
     },
     // 是否加载到 app 上，默认开启
     app: true,
